@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5f2;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #167568;
+    margin-bottom: 30px;
+}
+
+.book-card {
+    background-color: #effaf7;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #269c88;
+    border-radius: 10px;
+}
+
+.book-card h2 {
+    color: #167568;
+}
+
+.book-card p {
+    color: #444;
+    line-height: 1.6;
+}

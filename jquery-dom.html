@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>jQuery DOM Manipulation</title>
+
+    <link rel="stylesheet" href="jquery-style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>jQuery DOM Manipulation</h1>
+            <p>Explore how jQuery can manipulate HTML elements.</p>
+        </header>
+
+        <!-- Question 1: Change Text -->
+        <div class="section">
+
+            <h2>1. Change Text</h2>
+
+            <p id="myElement">
+                This is the original text.
+            </p>
+
+            <button id="changeText">
+                Change Text
+            </button>
+
+        </div>
+
+        <!-- Question 2: Add CSS Class -->
+        <div class="section">
+
+            <h2>2. Add CSS Class</h2>
+
+            <div id="myDIV">
+                This is my DIV element.
+            </div>
+
+            <button id="addStyle">
+                Add Style
+            </button>
+
+        </div>
+
+        <!-- Question 3: Click Event -->
+        <div class="section">
+
+            <h2>3. Click Event</h2>
+
+            <p>Click the button below to display an alert message.</p>
+
+            <button id="myButton">
+                Click Me
+            </button>
+
+        </div>
+
+        <footer>
+            <p>Web Development | Lab 4B</p>
+        </footer>
+
+    </div>
+
+
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+
+    <!-- jQuery Functions -->
+    <script>
+
+        $(document).ready(function() {
+
+            // 1. Change Text
+            $("#changeText").click(function() {
+
+                $("#myElement").text(
+                    "The text has been changed using jQuery!"
+                );
+
+            });
+
+
+            // 2. Add CSS Class
+            $("#addStyle").click(function() {
+
+                $("#myDIV").addClass("myStyle");
+
+            });
+
+
+            // 3. Click Event
+            $("#myButton").click(function() {
+
+                alert("Button clicked successfully!");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

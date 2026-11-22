@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Book Information</h1>
+
+        <div id="bookContainer">
+            <p>Loading book information...</p>
+        </div>
+    </div>
+
+    <script>
+
+        fetch("books.json")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Unable to retrieve book data.");
+                }
+
+                return response.json();
+            })
+
+            .then(data => {
+
+                const container = document.getElementById("bookContainer");
+
+                container.innerHTML = "";
+
+                data.forEach(book => {
+
+                    const bookCard = document.createElement("div");
+                    bookCard.className = "book-card";
+
+                    const title = document.createElement("h2");
+                    title.textContent = book.title;
+
+                    const author = document.createElement("p");
+                    author.textContent = "Author: " + book.author;
+
+                    const year = document.createElement("p");
+                    year.textContent = "Year: " + book.year;
+
+                    const genres = document.createElement("p");
+                    genres.textContent = "Genres: " + book.genres.join(", ");
+
+                    bookCard.appendChild(title);
+                    bookCard.appendChild(author);
+                    bookCard.appendChild(year);
+                    bookCard.appendChild(genres);
+
+                    container.appendChild(bookCard);
+
+                });
+
+            })
+
+            .catch(error => {
+                document.getElementById("bookContainer").textContent =
+                    "Error: " + error.message;
+            });
+
+    </script>
+
+</body>
+</html>

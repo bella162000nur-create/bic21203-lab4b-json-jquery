@@ -1,0 +1,102 @@
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5f2;
+    margin: 0;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* Main Container */
+.container {
+    max-width: 750px;
+    margin: auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    color: #167568;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #777;
+    font-size: 15px;
+}
+
+/* Sections */
+.section {
+    background-color: #f4faf8;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: 1px solid #dcefe9;
+}
+
+.section h2 {
+    color: #167568;
+    font-size: 21px;
+    margin-top: 0;
+}
+
+.section p {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Buttons */
+button {
+    background-color: #269c88;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #167568;
+}
+
+/* DIV Element */
+#myDIV {
+    padding: 18px;
+    background-color: #e9eeee;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+/* Required CSS Class */
+.myStyle {
+    background-color: coral;
+    padding: 16px;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #999;
+    font-size: 13px;
+}
